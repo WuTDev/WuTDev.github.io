@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WuToDo's Game</title>
+  <link rel="icon" href="Assets/Images/Favicon.png">
+  <link href="Dist/css/game.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body{
+      background-image: url('assets/Images/enviromnent/training/background.png');
+    }
+    .floor{
+      background-image: url('assets/Images/enviromnent/training/ground.jpg');
+    }
+  </style>
+</head>
+
+<body>
+  <audio id="jump-sound" controls style="display:none">
+    <source src="assets/sounds/jump.mp3" type="audio/mpeg">
+  </audio>
+  <!-- In Case Of Portrait -->
+  <div id="validate-phone" class="validate-phone d-none">
+    <h5 class="force-center">Please Rotate Your Phone</h5>
+  </div>
+  <input type="text" id="commands" class="commands" placeholder="chat" style="opacity: 1;">
+  <!-- In Case Of Portrait -->
+  <ul class="statBoard d-none">
+    <li>Player Height : <div id="playerHeight"></div>
+    </li>
+    <li>Player Width : <div id="playerWidth"></div>
+    </li>
+    <li>Screen Height : <div id="windowHeight"></div>
+    </li>
+    <li>Screen Width : <div id="windowWidth"></div>
+    </li>
+    <li>Floor Height : <div id="floorHeight"></div>
+    </li>
+    <li>Speed : <div id="speed"></div>
+    </li>
+    <li>Left : <div id="playerLeft"></div>
+    </li>
+    <li>Top : <div id="playerTop"></div>
+    </li>
+  </ul>
+  <!--Player-->
+  <div class="obj" id="player-obj">
+    <ul class="chat" id="chat">
+</ul>
+    <p id="player-name" style="
+    text-align: center;
+    position: absolute;
+    bottom: 100%;
+    color:white;
+    width: max-content;
+">Player 1</p>
+    <div id="player-img" style="
+background-image:url('assets/Images/player/stand.png');width: inherit;position: absolute;display: inline;bottom: 2px;background-size: cover;height: 50px;"> </div>
+  </div>
+  <!--Player-->
+
+  <div class="object"></div>
+  <!--Floor-->
+  <div class="floor" id="floor"></div>
+  <!--Floor-->
+
+  <script src="Dist/js/physics.js"></script>
+  <script src="Dist/js/animations.js"></script>
+  <script src="Dist/js/others.js"></script>
+</body>
+
+</html>
