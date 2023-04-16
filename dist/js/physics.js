@@ -113,6 +113,14 @@ window.addEventListener("keyup", (event) => {
                 case '/hidenick':
                     $('#player-name').toggleClass('d-none');
                 break;
+                case '/hidden':
+                    $("#player-img").css('opacity', '0');
+                    $('#player-name').addClass('d-none');
+                    break;
+                case '/show':
+                    $("#player-img").css('opacity', '0');
+                    $('#player-name').removeClass('d-none');
+                    break;
             }
             if(!command.includes('/')){
                 $("#chat").css('display','block');
@@ -256,7 +264,7 @@ function timer() {
         if (
         ($(window).height() - floorHeight > $("#player-obj").offset().top + playerHeight || 
         $("#player-obj").offset().top + playerHeight < ($('.object').height() + $('.object').offset().bottom) - $(window).height())
-         && sessionStorage.getItem('playerRole') != 'admin') {
+         || sessionStorage.getItem('playerRole') == 'admin') {
             currPlayer.style.top = ($("#player-obj").offset().top + speed) + 'px';
         }
     }
