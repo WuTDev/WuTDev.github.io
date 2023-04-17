@@ -53,7 +53,7 @@ window.addEventListener("keydown", (event) => {
         $("#player-img").addClass('look-left');
         var timestamp = new Date().getTime();
         if(moveUp == false && moveRight == false){
-            document.getElementById('player-img').style.backgroundImage = "url('./assets/images/player/walk.gif')";
+            document.getElementById('player-img').style.backgroundImage = "url('./assets/Images/player/walk.gif')";
         }
         moveLeft = true;
     }
@@ -61,7 +61,7 @@ window.addEventListener("keydown", (event) => {
         $("#player-img").removeClass('look-left');
         var timestamp = new Date().getTime();
         if(moveUp == false && moveLeft == false){
-            document.getElementById('player-img').style.backgroundImage = "url('./assets/images/player/walk.gif')";
+            document.getElementById('player-img').style.backgroundImage = "url('./assets/Images/player/walk.gif')";
         }
         moveRight = true;
     }
@@ -108,7 +108,7 @@ window.addEventListener("keyup", (event) => {
                     $("#commands").css('opacity','0');
                 break;
                 case '/mush':
-                    document.getElementById('player-img').style.backgroundImage = "url('./assets/images/player/mush.png')";
+                    document.getElementById('player-img').style.backgroundImage = "url('./assets/Images/player/mush.png')";
                     break;
                 case '/hidenick':
                     $('#player-name').toggleClass('d-none');
@@ -172,19 +172,19 @@ window.addEventListener("keyup", (event) => {
     }
     if(event.key == 'ArrowLeft'){
         moveLeft = false;
-        document.getElementById('player-img').style.backgroundImage = "url('./assets/images/player/stand.png')";
+        document.getElementById('player-img').style.backgroundImage = "url('./assets/Images/player/stand.png')";
     }
     if(event.key == 'ArrowUp'){
         moveUp = false;
         if(moveLeft == false && moveRight == false){
-            document.getElementById('player-img').style.backgroundImage = "url('./assets/images/player/stand.png')";
+            document.getElementById('player-img').style.backgroundImage = "url('./assets/Images/player/stand.png')";
         }else{
-            document.getElementById('player-img').style.backgroundImage = "url('./assets/images/player/walk.gif')";
+            document.getElementById('player-img').style.backgroundImage = "url('./assets/Images/player/walk.gif')";
         }
     }
     if(event.key == 'ArrowRight'){
         moveRight = false;
-        document.getElementById('player-img').style.backgroundImage = "url('./assets/images/player/stand.png')";
+        document.getElementById('player-img').style.backgroundImage = "url('./assets/Images/player/stand.png')";
     }
     if(event.key == 'ArrowDown'){
         moveDown = false;
