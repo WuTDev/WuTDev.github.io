@@ -40,7 +40,7 @@ window.addEventListener("keydown", (event) => {
     if (moveUp != true || sessionStorage.getItem('playerRole') == 'admin') {
         if (event.keyCode == 38) {
             if ($(window).height() - floorHeight <= parseInt($("#player-obj").offset().top) + playerHeight || sessionStorage.getItem('playerRole') == 'admin') {
-                document.getElementById('player-img').style.backgroundImage = "url('assets/images/player/jump.png')";
+                document.getElementById('player-img').style.backgroundImage = "url('assets/Images/player/jump.png')";
                 moveUp = true;
                 if (sessionStorage.getItem('playerRole') != 'admin') {
                     document.getElementById('jump-sound').play();
