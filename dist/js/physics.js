@@ -114,12 +114,13 @@ window.addEventListener("keyup", (event) => {
                     $('#player-name').toggleClass('d-none');
                 break;
                 case '/hidden':
-                    $("#player-img").css('opacity', '0');
+                    if($("#player-img").hasClass('d-none')){
+                        $("#player-img").removeClass('d-none');
+                        $('#player-name').removeClass('d-none');
+                    }else{
+                    $("#player-img").addClass('d-none');
                     $('#player-name').addClass('d-none');
-                    break;
-                case '/show':
-                    $("#player-img").css('opacity', '0');
-                    $('#player-name').removeClass('d-none');
+                    }
                     break;
             }
             if(!command.includes('/')){
