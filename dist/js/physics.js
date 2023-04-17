@@ -108,7 +108,7 @@ window.addEventListener("keyup", (event) => {
                     $("#commands").css('opacity','0');
                 break;
                 case '/mush':
-                    document.getElementById('player-img').style.backgroundImage = "url('assets/images/player/mush.png')";
+                    document.getElementById('player-img').style.backgroundImage = "url('./assets/images/player/mush.png')";
                     break;
                 case '/hidenick':
                     $('#player-name').toggleClass('d-none');
