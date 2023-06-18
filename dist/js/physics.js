@@ -43,7 +43,9 @@ window.addEventListener("keydown", (event) => {
                 document.getElementById('player-img').style.backgroundImage = "url('assets/Images/player/jump.png')";
                 moveUp = true;
                 if (sessionStorage.getItem('playerRole') != 'admin') {
-                    document.getElementById('jump-sound').play();
+                    var audio = document.getElementById('jump-sound');
+                        audio.currentTime = 0
+                        audio.play();
                 }
                 jumpSpeed = Jump;
             }
