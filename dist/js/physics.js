@@ -239,7 +239,7 @@ function timer() {
         return null;
     }
 
-    if (($(window).height() - floorHeight > $("#player-obj").offset().top + playerHeight ||  $("#player-obj").offset().top + playerHeight < ($('.object').height() + $('.object').offset().bottom) - $(window).height())  
+    if (($(window).height() - floorHeight > $("#player-obj").offset().top + playerHeight)  
     && sessionStorage.getItem('playerRole') != 'admin') {
         for(var i = 2; i < gravity; i++){
             currPlayer.style.top = ($("#player-obj").offset().top + i) + 'px';
@@ -265,8 +265,7 @@ function timer() {
     }
     if (moveDown) {
         if (
-        ($(window).height() - floorHeight > $("#player-obj").offset().top + playerHeight || 
-        $("#player-obj").offset().top + playerHeight < ($('.object').height() + $('.object').offset().bottom) - $(window).height())
+        ($(window).height() - floorHeight > $("#player-obj").offset().top + playerHeight)
          || sessionStorage.getItem('playerRole') == 'admin') {
             currPlayer.style.top = ($("#player-obj").offset().top + speed) + 'px';
         }
